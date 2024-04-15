@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishing_HelpDesk</title>
+
+<script>
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
+  </script>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center; /* Vertically center content */
+            padding: 1rem; /* Adjust padding as needed */
+            background-color: #f0f0f0;
+            z-index: 1; /* Make sure the header stays on top */
+        }
+
+        .header-content {
+            flex: 1; /* Allow title to grow and fill remaining space */
+            display: flex;
+            /* We keep justify-content: center for centering */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the title element with higher specificity */
+        .title-button {
+            font-size: 80px; /* Increase title font size */
+            color:#79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center; /* Center title horizontally */
+            position: relative; /* Needed for proper positioning of ::before */
+            margin-left: 210px; /* Adjust margin as needed */
+            padding-left: 200px; /* Adjust padding as needed */
+            padding-right: 200px; /* Adjust padding as needed */
+        }
+
+        .meet-the-team-button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            /* text-decoration: underline; /* Add underline to text */
+            /* text-decoration-thickness: 1px; /* Thinner underline */
+            border: 3px solid white ; /* Set width, style, and color */
+            /*=  border-radius: 0px */
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 2rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+
+            /* Position the button at top left */
+            position: absolute;
+            top: 10;
+            left: 50px;
+        }
+
+        .meet-the-team-button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            border: 3px solid #ecac5b ; /* Set width, style, and color */
+            font-weight: bold; /* Make text bold on hover */
+        } 
+
+        .logo {
+            /* Style your logo image here */
+            width: 210px; /* Adjust width as needed */
+            height: 134px; /* Adjust height as needed */
+            margin-right: 60px; /* Add margin to the right to move it off the wall */
+            cursor: pointer; /* Set cursor to pointer for home button behavior */
+        }
+
+        .button-container {
+            margin-top: 1rem; /* Adjust margin as needed */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Style for the buttons with the desired color and hover effect */
+        .button-container button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            border-radius: 0px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 5rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+            display: flex; /* Arrange buttons side-by-side */
+            /* Optional: Remove button margin if applied */
+            margin: 0;
+        }
+
+        .button-container button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            font-weight: bold; /* Make text bold on hover */
+        }
+        
+    </style>
+    </head>
+    <body>
+        <header class="sticky">
+            <div class="header-content">
+            <button onclick="redirectToPage('https://www.google.com/')" class="meet-the-team-button">Meet the Team</button> 
+            <button onclick="redirectToPage('https://www.google.com/')" class="title-button">LopeTrap</button>
+            </div>
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/LopeTrap_Logo.png?raw=true" alt="Logo" class="logo">
+        </header>
+        
+    <div class="button-container">
+
+        <button onclick="redirectToPage('https://www.google.com/')" class="redirect-button">Campaign 1 - Quishing</button>
+        <button onclick="redirectToPage('https://www.google.com/')" class="redirect-button">Campaign 1 - USB Baiting</button>
+        <button onclick="redirectToPage('https://www.google.com/')" class="redirect-button">Campaign 2 - Vishing Help Desk</button>
+        <button onclick="redirectToPage('https://www.google.com/')" class="redirect-button">Campaign 2 - Vishing Public Safety</button>
+    </div>    
+</body>
+</section>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+ <style>
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            font-size: 45px;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            color: #79060a; /* color */
+        }
+
+        h2 {
+            margin-top: 40px;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration-thickness: 2px;
+            margin-bottom: 1rem; /* Using rem for better compatibility */
+            font-size: 35px;
+            color: #79060a; /* color */
+            position: relative; /* Needed for pseudo-element positioning */
+            padding-left: 4rem; /* Padding*/
+        }
+
+        .attack-title {
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #79060a /* color */;
+            font-weight: bold;
+            padding-left: 6.5rem; /* Padding*/
+        }
+
+        h3 {
+            font-family: Garamond, 'Times New Roman', Times, serif;
+            color: #79060a; /* color */
+            font-size: 25px;
+            padding-left: 10rem; /* Padding*/
+            margin-bottom: 10px;
+        }
+ </style>
+
+<style>
+    p{
+        font-family: Garamond, 'Times New Roman', Times, serif;
+        color: black; /* color */
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .bold-label {
+        font-weight: bold; /* Makes the text bold */
+    }
+
+    .redacted {
+        background-color: black;
+        color: black;
+        padding: 2px;  /* Optional padding for better visibility */
+    }
+
+    .tabbed-text {
+        /*white-space: pre-wrap;  /* Preserves whitespace characters */
+        padding-left: 2em;  /* Indent the text */
+    }
+
+</style>
+
+    <body>
+        <h1>Campaign 2 - Vishing Help Desk</h1>
+
+        <h2>Attack Description:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <div style="padding-left: 8rem">
+            <p> 
+                <span class="tabbed-text">
+                    The Help Desk Vishing attacks aimed to persuade analysts from the Help Desk to perform tasks for LopeTrap by using social engineering. The original two attacks were to reset a user’s password and then reset their MFA. To avoid disrupting employee uptime, LopeTrap worked closely with IT Security to have a contractor account created for all these attacks. After the first two attacks were completed successfully, the user account got locked due to consecutive incorrect passwords during testing. Due to being locked out of the account, a request was sent to IT Security to approve a third call to get the account unlocked. All three of these attacks occurred on the same day but were spaced out throughout the workday to target different analysts. To prevent the Help Desk operator from recognizing the student’s name associated with their cell phone number, the protocol was to first call the mainline and then be transferred to the Help Desk.
+                </span>
+            </p>
+        </div>
+                
+        <div style="text-align: left; margin-left: 7rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/HD%20-%20Intro.png?raw=true" alt="Image description" style="width: 90%; height: 90%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+
+
+        <h2>Scope:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <h3 style="padding-left: 8rem">In Scope:</h3>
+        <div style="padding-left: 10rem">
+            <p> 
+                We are permitted to gain access to the internal network using social engineering techniques and by contacting the Help Desk.
+            </p>
+        </div>
+        <h3 style="padding-left: 8rem">Out of Scope:</h3>
+        <div style="padding-left: 10rem">
+            <p> 
+                Disrupting work or school operations is prohibited. Additionally, testing on any accounts other than the provided test account designated as our target for these attacks is not allowed.    
+            </p>
+        </div>
+
+        <h2>Event Log:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <style>
+            #event-log-table {
+              width: 90%;
+              border-collapse: collapse;
+              margin-bottom: 20px;
+              margin-left: 6.5rem; /* Adjusted margin-left for readability */
+            }
+          
+            th,
+            td {
+              padding: 10px;
+              text-align: left;
+              font-family: Garamond, 'Times New Roman', Times, serif;
+              font-size: 20px;
+            }
+          
+            th {
+              background-color: #ecac5b; /* Header color */
+              font-weight: bold;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f6d6ad; /* Alternating row color 1 */
+            }
+          
+            tr:nth-child(odd) {
+              background-color: #f4cd9d; /* Alternating row color 2 */
+            }
+          
+            tr:hover {
+              background-color: #fbeede; /* Hover color */
+            }
+          </style>
+
+            <table id="event-log-table" border="1">  <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>March 05</td>
+                        <td>LopeTrap collaborated with IT Security to devise a safe and controlled method of executing these attacks.</td>
+                    </tr>
+                    <tr>
+                        <td>March 07</td>
+                        <td>LopeTrap developed a high-level pretexting script to be utilized during the engagement.</td>
+                    </tr>
+                    <tr>
+                        <td>March 18</td>
+                        <td>IT Security began the development of our test account.</td>
+                    </tr>
+                    <tr>
+                        <td>March 21</td>
+                        <td>LopeTrap conducted simulated phone call exercises with the team.</td>
+                    </tr>
+                    <tr>
+                        <td>March 25</td>
+                        <td>IT Security provided LopeTrap with the test user's basic information.</td>
+                    </tr>
+                    <tr>
+                        <td>March 26</td>
+                        <td>LopeTrap presented the specifics of Attack 1 and Attack 2 to IT Security for final approval.</td>
+                    </tr>
+                    <tr>
+                        <td>March 26</td>
+                        <td>Executed Attack 1 – Password Reset.</td>
+                    </tr>
+                    <tr>
+                        <td>March 26</td>
+                        <td>Executed Attack 2 – MFA Reset.</td>
+                    </tr>
+                    <tr>
+                        <td>March 26</td>
+                        <td>LopeTrap expedited the submission of Attack 3 (account unlock) to IT Security for immediate approval.</td>
+                    </tr>
+                    <tr>
+                        <td>March 26</td>
+                        <td>Executed Attack 3 – Account Unlock.</td>
+                    </tr>
+                    <tr>
+                        <td>March 27</td>
+                        <td>LopeTrap authored and delivered a comprehensive report to IT Security, outlining details and offering remedial recommendations for Campaign 2 – Vishing – Help Desk.</td>
+                    </tr>
+                </tbody>
+                
+              </tbody>
+            </table>
+          </section>
+          
+        <h2>Attacks:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <h3 class="attack-title">Attack 1 - Password Reset</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                In the initial attack, LopeTrap contacted the Help Desk using solely the test user’s first and last name. Employing social engineering tactics throughout the conversation, we successfully obtained the test user’s username, executed a password reset, and were provided with the new password.            </p>
+        </div>
+        <h3>Attack Details:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;">
+            <p> 
+                <span class="bold-label">LopeTrap Attacker:</span> Sean Jabri<br>
+                <span class="bold-label">Impersonating:</span> <span class="redacted">REDACTED</span><br>
+                <span class="bold-label">Position:</span> <span class="redacted">REDACTED</span><br>
+                <span class="bold-label">Date of Attack:</span> 3/26<br>
+                <span class="bold-label">Time of Attack:</span> 10:56 AM<br>
+                <span class="bold-label">Password Reset:</span> SUCCESS<br>
+                <span class="bold-label">Request Number:</span> <span class="redacted">REDACTED</span><br>                
+            </p>
+        </div>
+        <h3>Proof of Success:</h3>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/HD%20-%20Password%20Reset%20Email.png?raw=true" alt="Image description" style="width: 75%; height: 75%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+
+        <h3>Remediation/Report:</h3>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/HD%201%20-%20Password%20Reset.png?raw=true" alt="Image description" style="width: 75%; height: 75%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+        
+        <br>
+
+        <h3 class="attack-title">Attack 2 - MFA Reset</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                Following the initial attack, LopeTrap proceeded with another attack by contacting the Help Desk and employing social engineering techniques to present a fabricated scenario justifying the reset of the account's Multi-Factor Authentication (MFA).
+            </p>
+        </div>
+        <h3>Attack Details:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;">
+            <p> 
+                <span class="bold-label">LopeTrap Attacker:</span> Sean Jabri<br>
+                <span class="bold-label">Impersonating:</span> <span class="redacted">REDACTED</span><br>
+                <span class="bold-label">Position:</span> <span class="redacted">REDACTED</span><br>
+                <span class="bold-label">Date of Attack:</span> 3/26<br>
+                <span class="bold-label">Time of Attack:</span> 2:50 PM<br>
+                <span class="bold-label">Password Reset:</span> SUCCESS<br>
+                <span class="bold-label">Request Number:</span> <span class="redacted">REDACTED</span><br>                
+            </p>
+        </div>
+        <h3>Proof of Success:</h3>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/MFA%20Confirmation.png?raw=true" alt="Image description" style="width: 75%; height: 75%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+
+        <h3>Remediation/Report:</h3>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/HD%202%20-%20MFA%20Reset.png?raw=true" alt="Image description" style="width: 75%; height: 75%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+    
+        <br>
+
+        <h3 class="attack-title">Attack 3 - Account Unlock</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                After the successful completion of the previous attacks, our testing triggered an account lockout due to numerous incorrect password attempts. Consequently, a third attack was necessary to unlock the test account. IT Security expedited approval for this action.            </p>
+        </div>
+        <h3>Attack Details:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;">
+            <p> 
+                <span class="bold-label">LopeTrap Attacker:</span> Sean Jabri<br>
+                <span class="bold-label">Impersonating:</span> <span class="redacted">REDACTED</span><br>
+                <span class="bold-label">Position:</span> <span class="redacted">REDACTED</span><br>
+                <span class="bold-label">Date of Attack:</span> 3/26<br>
+                <span class="bold-label">Time of Attack:</span> 4:33 PM<br>
+                <span class="bold-label">Account Unlock:</span> SUCCESS<br>
+                <span class="bold-label">Request Number:</span> <span class="redacted">REDACTED</span><br>
+                <span class="bold-label">Account's New Password:</span> <span class="redacted">REDACTED</span><br>                
+            </p>
+        </div>
+
+        <h3>Proof of Success:</h3>
+        <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/HD%20-%20MyAccount.png?raw=true" alt="Image description" style="width: 75%; height: 75%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+
+        <h3>Remediation/Report:</h3>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/HD%203%20-%20Account%20Unlock.png?raw=true" alt="Image description" style="width: 75%; height: 75%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Vishing-HD/HD%20-%20Remediation.png?raw=true" alt="Image description" style="width: 90%; height: 90%; border: 3px solid #f0f0f0; margin: 10px;">  </div>
+
+        <br>
+    </body>
+
+</section>
+</html>
