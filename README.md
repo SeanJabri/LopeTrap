@@ -9,3 +9,6 @@ Our mission is to conduct tests on the GCU campus, including its students, staff
 
 ## Vision:
 Our vision for this project is to cultivate a stronger cybersecurity-oriented mindset among the students, staff, and faculty of the GCU campus. By promoting awareness, knowledge, and proactive measures against cyber threats, we aim to empower individuals to safeguard their digital assets and contribute to a campus environment that prioritizes security.
+
+## Check Out the Website:
+https://seanjabri.github.io/LopeTrap/Main_Page
