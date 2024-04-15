@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quishing</title>
+
+<script>
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
+  </script>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center; /* Vertically center content */
+            padding: 1rem; /* Adjust padding as needed */
+            background-color: #f0f0f0;
+            z-index: 1; /* Make sure the header stays on top */
+        }
+
+        .header-content {
+            flex: 1; /* Allow title to grow and fill remaining space */
+            display: flex;
+            /* We keep justify-content: center for centering */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the title element with higher specificity */
+        .title-button {
+            font-size: 80px; /* Increase title font size */
+            color:#79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center; /* Center title horizontally */
+            position: relative; /* Needed for proper positioning of ::before */
+            margin-left: 210px; /* Adjust margin as needed */
+            padding-left: 200px; /* Adjust padding as needed */
+            padding-right: 200px; /* Adjust padding as needed */
+        }
+
+        .meet-the-team-button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            /* text-decoration: underline; /* Add underline to text */
+            /* text-decoration-thickness: 1px; /* Thinner underline */
+            border: 3px solid white ; /* Set width, style, and color */
+            /*=  border-radius: 0px */
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 2rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+
+            /* Position the button at top left */
+            position: absolute;
+            top: 10;
+            left: 50px;
+        }
+
+        .meet-the-team-button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            border: 3px solid #ecac5b ; /* Set width, style, and color */
+            font-weight: bold; /* Make text bold on hover */
+        } 
+
+        .logo {
+            /* Style your logo image here */
+            width: 210px; /* Adjust width as needed */
+            height: 134px; /* Adjust height as needed */
+            margin-right: 60px; /* Add margin to the right to move it off the wall */
+            cursor: pointer; /* Set cursor to pointer for home button behavior */
+        }
+
+        .button-container {
+            margin-top: 1rem; /* Adjust margin as needed */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Style for the buttons with the desired color and hover effect */
+        .button-container button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            border-radius: 0px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 5rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+            display: flex; /* Arrange buttons side-by-side */
+            /* Optional: Remove button margin if applied */
+            margin: 0;
+        }
+
+        .button-container button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            font-weight: bold; /* Make text bold on hover */
+        }
+        
+    </style>
+    </head>
+    <body>
+        <header class="sticky">
+            <div class="header-content">
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Main_Page#Team')" class="meet-the-team-button">Meet the Team</button> 
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Main_Page')" class="title-button">LopeTrap</button>
+            </div>
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/LopeTrap_Logo.png?raw=true" alt="Logo" class="logo">
+        </header>
+        
+    <div class="button-container">
+
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/USB_Baiting')" class="redirect-button">Campaign 1 - USB Baiting</button>
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Help_Desk')" class="redirect-button">Campaign 2 - Vishing Help Desk</button>
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Public_Safety')" class="redirect-button">Campaign 2 - Vishing Public Safety</button>
+    </div>    
+</body>
+</section>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+ <style>
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            font-size: 45px;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            color: #79060a; /* color */
+        }
+
+        h2 {
+            margin-top: 40px;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration-thickness: 2px;
+            margin-bottom: 1rem; /* Using rem for better compatibility */
+            font-size: 35px;
+            color: #79060a; /* color */
+            position: relative; /* Needed for pseudo-element positioning */
+            padding-left: 4rem; /* Padding*/
+        }
+
+        .attack-title {
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #79060a /* color */;
+            font-weight: bold;
+            padding-left: 6.5rem; /* Padding*/
+        }
+
+        h3 {
+            font-family: Garamond, 'Times New Roman', Times, serif;
+            color: #79060a; /* color */
+            font-size: 25px;
+            padding-left: 10rem; /* Padding*/
+            margin-bottom: 10px;
+        }
+ </style>
+
+<style>
+    p{
+        font-family: Garamond, 'Times New Roman', Times, serif;
+        color: black; /* color */
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .bold-label {
+        font-weight: bold; /* Makes the text bold */
+    }
+
+    .redacted {
+        background-color: black;
+        color: black;
+        padding: 2px;  /* Optional padding for better visibility */
+    }
+
+    .tabbed-text {
+        /*white-space: pre-wrap;  /* Preserves whitespace characters */
+        padding-left: 2em;  /* Indent the text */
+    }
+
+</style>
+
+    <body>
+        <h1>Campaign 1 - Quishing</h1>
+
+        <h2>What is Quishing?</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <div style="padding-left: 8rem">
+            <p> 
+                <span class="tabbed-text">
+                    Quishing, also known as QR phishing, is a term used to describe a type of phishing attack that leverages QR codes. It involves tricking individuals into scanning QR codes that lead them to malicious websites or prompt them to divulge sensitive information. While lesser known compared to phishing, quishing poses an equally significant threat.
+                </span>
+            </p>
+        </div>
+
+        <h2>Attack Description:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <div style="padding-left: 8rem">
+            <p> 
+                <span class="tabbed-text">
+                    This phase of the social engineering campaign involved analyzing campus trends and creating posters designed to attract students, guiding them toward a QR code promising rewards or benefits. Once the user scanned the QR code, LopeTrap would track the scan, collecting minimal user information, and then redirect the user to a non-malicious website to avoid arousing suspicion.
+                </span>
+            </p>
+        </div>
+
+
+        <h2>Scope:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <h3 style="padding-left: 8rem">In Scope:</h3>
+        <div style="padding-left: 10rem">
+            <p> 
+                We are authorized to distribute benign QR codes strategically across campus, collecting the minimal amount of user information necessary.
+            </p>
+        </div>
+        <h3 style="padding-left: 8rem">Out of Scope:</h3>
+        <div style="padding-left: 10rem">
+            <p> 
+                Disrupting work or school operations is prohibited. Additionally, engaging in data theft or the exploitation of sensitive user data beyond what is necessary for tracking QR code scans is prohibited.
+            </p>
+        </div>
+
+        <h2>Event Log:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <style>
+            #event-log-table {
+              width: 90%;
+              border-collapse: collapse;
+              margin-bottom: 20px;
+              margin-left: 6.5rem; /* Adjusted margin-left for readability */
+            }
+          
+            th,
+            td {
+              padding: 10px;
+              text-align: left;
+              font-family: Garamond, 'Times New Roman', Times, serif;
+              font-size: 20px;
+            }
+          
+            th {
+              background-color: #ecac5b; /* Header color */
+              font-weight: bold;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f6d6ad; /* Alternating row color 1 */
+            }
+          
+            tr:nth-child(odd) {
+              background-color: #f4cd9d; /* Alternating row color 2 */
+            }
+          
+            tr:hover {
+              background-color: #fbeede; /* Hover color */
+            }
+          </style>
+
+            <table id="event-log-table" border="1">  <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January 25 - February 12</td>
+                        <td>LopeTrap conducted a comprehensive analysis of campus trends to discern prevailing student interests, facilitating the strategic design of promotional flyers.</td>
+                    </tr>
+                    <tr>
+                        <td>February 12</td>
+                        <td>LopeTrap developed preliminary designs for the flyers.</td>
+                    </tr>
+                    <tr>
+                        <td>February 16</td>
+                        <td>LopeTrap refined and finalized the flyer designs, conducting thorough testing to validate the functionality of embedded QR codes and links.</td>
+                    </tr>
+                    <tr>
+                        <td>February 19</td>
+                        <td>LopeTrap secured IT Security approval for the deployment of the QR phishing flyers.</td>
+                    </tr>
+            <tr>
+                        <td>February 27</td>
+                        <td>LopeTrap strategically deployed the posters across campus for optimal visibility and engagement.</td>
+                    </tr>
+                    <tr>
+                        <td>February 27 - March 23</td>
+                        <td>LopeTrap collected and analyzed metrics derived from the flyers and their corresponding scans.</td>
+                    </tr>
+                    <tr>
+                        <td>March 6 - March 7</td>
+                        <td>LopeTrap repositioned flyers that had been displaced or were no longer present.</td>
+                    </tr>
+                    <tr>
+                        <td>February 27 - March 23</td>
+                        <td>LopeTrap collected and analyzed metrics derived from the flyers and their corresponding scans.</td>
+                    </tr>
+                    <tr>
+                        <td>March 18</td>
+                        <td>LopeTrap conducted a comprehensive data analysis on the collected metrics.</td>
+                    </tr>
+                    <tr>
+                        <td>March 20</td>
+                        <td>LopeTrap formulated a remedial design plan.</td>
+                    </tr>
+                    <tr>
+                        <td>March 22</td>
+                        <td>LopeTrap secured IT Security approval for the implementation of the remediation plan.</td>
+                    </tr>
+                    <tr>
+                        <td>March 23</td>
+                        <td>LopeTrap strategically deployed the remediation posters throughout the campus.</td>
+                    </tr>
+                </tbody>
+                
+              </tbody>
+            </table>
+          </section>
+          
+        <h2>Attacks:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <h3 class="attack-title">Attack 1 -Chick-fil-A</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                Recognizing Chick-fil-A's predominant popularity on campus, we tailored this poster to mimic a Chick-fil-A giveaway campaign. Incorporating Chick-fil-A's signature font, and utilizing a color palette of reds and cow prints, the design was meticulously crafted to mirror Chick-fil-A's branding. The QR code embedded within directed users to a designated link, intended to mirror Chick-fil-A's online presence, albeit leading to a strategically designed 404 error page.</p>
+        </div>
+        <h3>Poster:</h3>
+            <div style="text-align: left; margin-left: 12rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/chick-fil-a.png?raw=true" width="300" height="400" alt="Chick-fil-a QR"> </div>
+        <h3>Metrics:</h3>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/chickfila%20metrics.png?raw=true" width="500" height="400" alt="Chick-fil-a Metrics">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Chick-Fil-A%20OS.png?raw=true" width="400" height="300" alt="Chick-fil-a OS">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Chick-Fil-A%20Cities.png?raw=true" width="400" height="300" alt="Chick-fil-a Cities">
+        </div>
+            <h3>Metric Analysis:</h3>
+            <div style="padding-left: 12rem">
+                <p> 
+                    This poster accumulated the most amount of scans of all other flyers throughout the period of time the campaign was active. Of the 218 total scans, a majority of them were recorded at the end of February and the beginning of March, when all or most of the posters were still in place. 191 of these scans were done on an iPhone, 26 on an Android, and 1 on a Windows 10 operating system. 86% of these scans were reported in Phoenix; the other 14% likely done on a device using a VPN.</p>
+        
+        </div>
+        <br>
+
+        <h3 class="attack-title">Attack 2 - GCBC</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                Following an in-depth analysis of campus trends, it was observed that GCBC, the coffee shop at GCU, maintains a prominent presence with multiple locations across campus and significant popularity among students. Given the extensive visibility of GCBC posters and advertisements on campus, the deployment of additional materials would blend seamlessly without raising suspicion. The poster design strategy employed GCBC's distinctive purple and white color scheme, along with a font reminiscent of their branding, to maintain coherence with existing advertisements. Additionally, a coffee cup graphic was incorporated to suggest affiliation with GCBC. The QR code embedded in the posters directed scanners to a "Not Found" page on the GCBC website.
+            </p>
+        </div>
+        <h3>Poster:</h3>
+            <div style="text-align: left; margin-left: 12rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/gcbc.png?raw=true" width="300" height="400" alt="gcbc QR"> </div>
+        <h3>Metrics:</h3>
+            <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/gcbc%20metrics.png?raw=true" width="400" height="300" alt="GCBC Metrics">
+                <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/GCBC%20OS.png?raw=true" width="400" height="300" alt="GCBC OS">
+                <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/GCBC%20Cities.png?raw=true" width="400" height="300" alt="GCBC Cities">
+        </div>
+            <h3>Metric Analysis:</h3>
+            <div style="padding-left: 12rem">
+                <p> 
+                    Of the 59 total scans, a majority of them were recorded at the end of February and the beginning of March, when all or most of the posters were still in place. There was then a dead period, when the posters had been taken down, before accumulating more scans after redeployment. 54 of these scans were done on iPhone devices, 2 of them on Android, 2 on a Windows 10 operating system, and 1 on a Mac OS X. 85% of these scans were reported in Phoenix; the other 15% likely done on a device using a VPN.</p>
+        </div>
+    
+        <br>
+
+        <h3 class="attack-title">Attack 3 - TISU</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                The Threat Intelligence Support Unit (TISU) at GCU is a weekly training program for individuals working towards a career in security operations. At the end of this training program, participants must register for a final exam. Posters with alleged registration forms were strategically positioned near the classroom where the sessions took place. These posters were designed with fonts resembling those used in TISU advertisements commonly found within the Technology building. The QR code embedded in the posters led scanners to a meticulously crafted "TISU Registration Form," designed to resemble an authentic registration process, requesting minimal information such as email and name. </p>
+        </div>
+        <h3>Poster/Form:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/tisu.png?raw=true" width="300" height="400" alt="TISU QR"> 
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/TISU%20registration%20form.png?raw=true" width="300" height="600" alt="TISU Registration">
+        </div>
+
+        <h3>Metrics:</h3>
+        <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/tisu%20responses.png?raw=true" width="300" height="400" alt="TISU Responses">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/TISU%20metrics.png?raw=true" width="400" height="300" alt="TISU Metrics">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Tisu%20OS.png?raw=true" width="400" height="300" alt="TISU OS">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Tisu%20Cities.png?raw=true" width="400" height="300" alt="TISU Cities"> 
+        </div>
+
+        <h3>Metric Analysis:</h3>
+            <div style="text-align: left; margin-left: 12rem;">
+                <p>
+                    Of the 17 scans, they primarily took place at the end of February/beginning of March and at the end of March, around the times of deployment and redeployment. 10 of these scans were done on iPhone devices, 4 of them on Android, 2 on a Windows 10 operating system, and 4 on a Linux operating system. 71% of these scans were reported in Phoenix; the other 29% likely done on a device using a VPN. 6 Individuals filled out the TISU registration form, all of which included their email addresses and full names (blocked out for privacy).
+                </p>
+        </div>
+        <br>
+
+        <h3 class="attack-title">Attack 4 - Internship Poster 1</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                Given the high demand for internships among college students, coupled with the abundance of internship opportunity flyers saturating campus notice boards, we devised two distinct counterfeit internship posters for dissemination, primarily targeting the Colangelo College of Business building. The initial poster featured a straightforward advertisement for a fictitious company named "Nozama," prominently displaying the phrase "We're Hiring" in large, attention-grabbing letters to pique curiosity and generate interest. </p>
+        </div>
+        <h3>Poster:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/red%20job.png?raw=true" width="300" height="400" alt="Red Job Poster">
+        </div>
+
+        <h3>Metrics:</h3>
+        <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/red%20job%20metrics.png?raw=true" width="400" height="300" alt="Red Job Metrics">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Red%20Job%20OS.png?raw=true" width="400" height="300" alt="Red Job OS">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Red%20Job%20Cities.png?raw=true" width="400" height="300" alt="Red Job OS Cities">
+        </div>
+
+        <h3>Metric Analysis:</h3>
+            <div style="text-align: left; margin-left: 12rem;">
+                <p>
+                    These posters were not put in an optimal location for students to see, which is likely why the total amount scans was only 7. A majority of these took place at the beginning of March with a dead period until April. 4 of these scans were done on iPhone devices, 2 of them on Android, and 1 on a Windows 10 operating system. 86% of these scans were reported in Phoenix; the other 14% likely done on a device using a VPN.
+                </p>
+        </div>
+        <br>
+
+        <h3 class="attack-title">Attack 5 - Internship Poster 2</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                The second internship poster, predominantly distributed within the Colangelo College of Business, adopted a minimalist approach. Emblazoned with bold letters reading "Looking For a Job?" the poster aimed to capture attention and evoke curiosity among viewers. Unlike its counterpart, this flyer omitted any specific company information, instead focusing solely on outlining the requirements for the internship opportunity. </p>
+        </div>
+        <h3>Poster:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Blue%20Job%20Poster.png?raw=true" width="300" height="400" alt="Blue Job Poster">
+        </div>
+
+        <h3>Metrics:</h3>
+        <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Blue%20Job%20Metrics.png?raw=true" width="400" height="300" alt="Blue Job Metrics">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Blue%20Job%20OS.png?raw=true" width="400" height="300" alt="Blue Job OS">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Blue%20Job%20Cities.png?raw=true" width="400" height="300" alt="Blue Job OS Cities">
+        </div>
+
+        <h3>Metric Analysis:</h3>
+            <div style="text-align: left; margin-left: 12rem;">
+                <p>
+                    These internship posters were deployed in locations more visible to students, allowing them to collect a total of 69 scans. Most of these scans took place at the end of February and beginning of March, but remained relatively consistent in accumulating scans throughout March. 61 of these scans were done on iPhone devices, 7 of them on Android, and 1 on a Windows 10 operating system. 78% of these scans were reported in Phoenix; the other 22% likely done on a device using a VPN.
+                </p>
+        </div>
+        <br>
+
+        <h3 class="attack-title">Attack 6 - Minecraft</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                Recognizing the affinity of the ESports student community for Minecraft, we conceived a themed poster specifically tailored to their interests. Featuring the Minecraft theme and logo, the poster was strategically placed within Building 57, the Technology Building. The QR code embedded within the poster seamlessly directed individuals to a designated link, subsequently leading them to a Discord server. </p>
+        </div>
+        <h3>Poster:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/minecraft.png?raw=true" width="300" height="400" alt="Minecraft QR">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/minecraft%20discord.png?raw=true" width="600" height="400" alt="Minecraft Discord">
+        </div>
+
+        <h3>Metrics:</h3>
+        <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Minecraft%20Metrics.png?raw=true" width="400" height="300" alt="Minecraft Metrics">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Minecraft%20OS.png?raw=true" width="400" height="300" alt="Minecraft OS">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Minecraft%20Cities.png?raw=true" width="400" height="300" alt="Minecraft Cities">
+        </div>
+
+        <h3>Metric Analysis:</h3>
+            <div style="text-align: left; margin-left: 12rem;">
+                <p>
+                    The Minecraft QR poster had a total of 162 scans that took place between the dates of February 26th to April 3rd. In total, we had 26 different cities scanned with 80% iPhone, 18% Android, 1% Mac OS, and 1% Windows.
+                </p>
+        </div>
+        <br>
+
+        <h3 class="attack-title">Attack 7 - Fortnite</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                Given our awareness of the ESports student body's interest in Fortnite, we developed a poster featuring the game's recognizable logo and theme. Positioned within the Technology Building, the poster offered an opportunity to win Fortnite currency, appealing to the targeted audience. The QR code redirected individuals to a Google form, requesting information such as email, Fortnite display name, and phone number, facilitating participation while adhering to data collection protocols. </p>
+        </div>
+        <h3>Poster:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Fortnite.png?raw=true" width="300" height="400" alt="Fortnite QR">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Fortnite%20Form.png?raw=true" width="300" height="600" alt="Fortnite Form">
+        </div>
+
+        <h3>Metrics:</h3>
+        <div style="text-align: left; margin-left: 12rem;">   <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/fortnite%20responses%201.png?raw=true" width="400" height="400" alt="Fortnite Responses 1">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/fornite%20responses%202.png?raw=true" width="400" height="500" alt="Fortnite Responses 2">
+            <p></p><img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/fortnite%20metrics.png?raw=true" width="400" height="300" alt="Fortnite Metrics">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Fortnite%20OS.png?raw=true" width="400" height="300" alt="Fortnite OS">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Fortnite%20Cities.png?raw=true" width="400" height="300" alt="Fortnite Cities">
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Fortnite%20Countries.png?raw=true" width="400" height="300" alt="Fortnite Countries">
+        </div>
+
+        <h3>Metric Analysis:</h3>
+            <div style="text-align: left; margin-left: 12rem;">
+                <p>
+                    The Fortnite QR poster had a total of 114 scans from the dates of February 26th to March 12. In total, there were 40 different cities scanned with 76% iPhone, 15% Windows, 11% Android, 3% Mac OS, and 2% unrecognized. 25 individuals filled out the form, with all 25 providing their email, 20 providing their Fortnite display name, and 14 providing their phone number (blocked out for privacy).
+                </p>
+        </div>
+        <br>
+
+        <h2>Remediation:</h2>
+        <body>
+            <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+        </body>
+    
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                Following a comprehensive analysis of our quishing poster campaign, we developed remediation posters aimed at raising awareness and educating the student body on social engineering tactics. These posters are designed to empower individuals with the knowledge and tools necessary to safeguard themselves and their data, irrespective of their prior cybersecurity knowledge. Our final designs feature a combination of warning messages, insights into potential impacts, and guidelines on safe QR code scanning. </p>
+            <p> In one of our poster designs, we included a secure QR code that, when scanned, redirects individuals to a Canva link reading, “Did you really just scan the QR code…. What did we just talk about?". This link directs users to a phishing quiz, providing an interactive opportunity to test their skills and enhance their understanding of cybersecurity concepts. </p>
+            <p>
+                Our overall objective was to strategically position these posters alongside other QR code posters and our original quishing attack posters, maximizing visibility and ensuring that students encounter our educational materials before engaging with potentially malicious QR codes. This proactive approach aims to empower individuals to make informed decisions and mitigate the risks associated with social engineering attacks.</p>
+        </div>
+        <h3>Remediation 1 Poster:</h3>
+        <div style="padding-left: 12rem; padding-right: 5rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/remediation%201.png?raw=true" width="300" height="400" alt="Remediation 1 QR">
+        </div>
+
+        <h3>Remediation 2 Poster:</h3>
+        <div style="text-align: left; margin-left: 12rem;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Orange%20QR.png?raw=true" width="300" height="400" alt="Orange QR">
+        </div>
+
+        <h3>Metrics:</h3>
+            <div style="text-align: left; margin-left: 12rem;"> <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/remediation%20metrics.png?raw=true" width="400" height="300" alt="Remediation Metrics">
+                <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Phishing%20Quiz%20Cities.png?raw=true" width="400" height="300" alt="Phishing Quiz Cities">
+                <img src="https://github.com/Hjenifer/lopeTrap/blob/main/Quishing/Phishing%20Quiz%20OS.png?raw=true" width="400" height="300" alt="Phishing Quiz OS">
+        </div>
+
+        <h3>Metric Analysis:</h3>
+            <div style="text-align: left; margin-left: 12rem;">
+                <p>
+                    The remediation QR codes accumulated a total of 19 scans after deployment of the posters and changing all QR codes for the remaining quishing flyers. 13 of these were done on iPhone devices, 3 on Android, and 3 on Windows 10 operating systems. 63% of these scans were reported in Phoenix; the other 37% likely done on a device using a VPN.
+                </p>
+        </div>
+        <br>
+    </body>
+
+</section>
+</html>
+
+
