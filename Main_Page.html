@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main_Page</title>
+
+<script>
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
+  </script>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center; /* Vertically center content */
+            padding: 1rem; /* Adjust padding as needed */
+            background-color: #f0f0f0;
+            z-index: 1; /* Make sure the header stays on top */
+        }
+
+        .header-content {
+            flex: 1; /* Allow title to grow and fill remaining space */
+            display: flex;
+            /* We keep justify-content: center for centering */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the title element with higher specificity */
+        .title-button {
+            font-size: 80px; /* Increase title font size */
+            color:#79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center; /* Center title horizontally */
+            position: relative; /* Needed for proper positioning of ::before */
+            margin-left: 210px; /* Adjust margin as needed */
+            padding-left: 200px; /* Adjust padding as needed */
+            padding-right: 200px; /* Adjust padding as needed */
+        }
+
+        .meet-the-team-button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            /* text-decoration: underline; /* Add underline to text */
+            /* text-decoration-thickness: 1px; /* Thinner underline */
+            border: 3px solid white ; /* Set width, style, and color */
+            /*=  border-radius: 0px */
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 2rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+
+            /* Position the button at top left */
+            position: absolute;
+            top: 10;
+            left: 50px;
+        }
+
+        .meet-the-team-button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            border: 3px solid #ecac5b ; /* Set width, style, and color */
+            font-weight: bold; /* Make text bold on hover */
+        } 
+
+        .logo {
+            /* Style your logo image here */
+            width: 210px; /* Adjust width as needed */
+            height: 134px; /* Adjust height as needed */
+            margin-right: 60px; /* Add margin to the right to move it off the wall */
+            cursor: pointer; /* Set cursor to pointer for home button behavior */
+        }
+
+        .button-container {
+            margin-top: 1rem; /* Adjust margin as needed */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Style for the buttons with the desired color and hover effect */
+        .button-container button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            border-radius: 0px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 5rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+            display: flex; /* Arrange buttons side-by-side */
+            /* Optional: Remove button margin if applied */
+            margin: 0;
+        }
+
+        .button-container button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            font-weight: bold; /* Make text bold on hover */
+        }
+        
+    </style>
+    </head>
+    <body>
+        <header class="sticky">
+            <div class="header-content">
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Main_Page#Team')" class="meet-the-team-button">Meet the Team</button> 
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Main_Page')" class="title-button">LopeTrap</button>
+            </div>
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/LopeTrap_Logo.png?raw=true" alt="Logo" class="logo">
+        </header>
+        
+    <div class="button-container">
+
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Quishing')" class="redirect-button">Campaign 1 - Quishing</button>
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/USB_Baiting)" class="redirect-button">Campaign 1 - USB Baiting</button>
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Help_Desk')" class="redirect-button">Campaign 2 - Vishing Help Desk</button>
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Public_Safety')" class="redirect-button">Campaign 2 - Vishing Public Safety</button>
+    </div>    
+</body>
+</section>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+ <style>
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            font-size: 40px;
+            text-decoration-thickness: 2px;
+            color: #79060a; /* color */
+        }
+
+        h2 {
+            margin-top: 40px;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration-thickness: 2px;
+            margin-bottom: 1rem; /* Using rem for better compatibility */
+            font-size: 35px;
+            color: #79060a; /* color */
+            position: relative; /* Needed for pseudo-element positioning */
+            padding-left: 4rem; /* Padding*/
+        }
+
+        .attack-title {
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #79060a /* color */;
+            font-weight: bold;
+            padding-left: 6.5rem; /* Padding*/
+        }
+
+        h3 {
+            font-family: Garamond, 'Times New Roman', Times, serif;
+            color: #79060a; /* color */
+            font-size: 25px;
+            padding-left: 10rem; /* Padding*/
+            margin-bottom: 10px;
+        }
+ </style>
+
+<style>
+    p{
+        font-family: Garamond, 'Times New Roman', Times, serif;
+        color: black; /* color */
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .bold-label {
+        font-weight: bold; /* Makes the text bold */
+    }
+
+    .redacted {
+        background-color: black;
+        color: black;
+        padding: 2px;  /* Optional padding for better visibility */
+    }
+
+    .tabbed-text {
+        /*white-space: pre-wrap;  /* Preserves whitespace characters */
+        padding-left: 2em;  /* Indent the text */
+    }
+
+</style>
+
+    <body>
+        <!--  <h1>Campaign 2 - Vishing Public Safety</h1>  -->
+
+        <br>
+
+        <h1 style="text-align: center;">What is LopeTrap?</h1>
+            <body>
+                <div style="position: center; width: 90%; margin: 0 auto; margin-left: 5rem; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <div style="padding-left: 8rem">
+            <p> 
+                <span class="tabbed-text">
+                    LopeTrap is the name of a social engineering campaign conducted by a group of IT and Cybersecurity students at GCU. This initiative targets the campus's students, staff, and faculty. LopeTrap employed OSINT for reconnaissance and analyzed campus trends to design our attacks. Working closely with IT Security, we obtained approval and conducted two rounds of social engineering campaigns against the GCU campus. After the attacks, we actively participated in the remediation process to address the uncovered vulnerabilities.                </span>
+            </p>
+        </div>
+
+        <div style="display: flex; flex-direction: row;">
+            <div style="flex: 1; padding-right: 0rem;">
+                <h1 style="text-align: center;">Mission</h1>
+                <body>
+                    <div style="width: 85%; margin: 0 auto; margin-left: 6rem; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+                </body>
+                <div style="padding-left: 8rem;">
+                    <p> 
+                        <span class="tabbed-text">
+                            Our mission is to conduct tests on the GCU campus, including its students, staff, and faculty, to evaluate their susceptibility to social engineering attacks and tactics. Following this assessment, we plan to educate them and provide remediation strategies, whether through policy enhancements, procedural adjustments, or increased awareness among individuals.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div style="flex: 1; padding-left: 0rem;">
+                <h1 style="text-align: center;">Vision</h1>
+                <body>
+                    <div style="width: 85%; margin: 0 auto; margin-left: 3rem; margin-right: 3rem; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+                </body>
+                <div style="padding-left: 6rem;">
+                    <p> 
+                        <span class="tabbed-text">
+                            Our vision for this project is to cultivate a stronger cybersecurity-oriented mindset among the students, staff, and faculty of the GCU campus. By promoting awareness, knowledge, and proactive measures against cyber threats, we aim to empower individuals to safeguard their digital assets and contribute to a campus environment that prioritizes security.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <h1 style="text-align: center;">Project Timeline</h1>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <style>
+
+            #event-log-table {
+                width: 75%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+           }   
+            
+           .table-container {
+                height: 100vh; /* Set container height to full viewport height */
+                display: flex; /* Use Flexbox layout */
+                justify-content: center; /* Center horizontally */
+                align-items: center; /* Center vertically */
+            }
+            
+            th,
+            td {
+              padding: 10px;
+              text-align: left;
+              font-family: Garamond, 'Times New Roman', Times, serif;
+              font-size: 23px;
+            }
+          
+            th {
+              background-color: #ecac5b; /* Header color */
+              font-weight: bold;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f6d6ad; /* Alternating row color 1 */
+            }
+          
+            tr:nth-child(odd) {
+              background-color: #f4cd9d; /* Alternating row color 2 */
+            }
+          
+            tr:hover {
+              background-color: #fbeede; /* Hover color */
+            }
+          </style>
+
+        <div class="table-container">
+            <table id="event-log-table" border="1">  <thead>
+                <tr>
+                    <th style="text-align: center;">Sequence</th>
+                    <th>Event</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;">01</td>
+                        <td>Obtain approval for the LopeTrap social engineering campaign during class.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">02</td>
+                        <td>Establish contact with IT Security and confirm the scope of the project.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">03</td>
+                        <td>Conduct an analysis of campus trends to inform the design of the campaigns.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">04</td>
+                        <td>Finalize and develop the social engineering attacks for Campaign 1.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">05</td>
+                        <td>Test and verify that data-gathering processes are functioning as intended.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">06</td>
+                        <td>Secure final approval from IT Security for the attacks planned in Campaign 1.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">07</td>
+                        <td>Execute the social engineering attacks outlined in Campaign 1.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">08</td>
+                        <td>Assess the need for redeployment of attacks in Campaign 1, adjusting as necessary based on the analysis of results.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">09</td>
+                        <td>Evaluate the outcomes of Campaign 1.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">10</td>
+                        <td>Devise and produce remedial materials for Campaign 1, such as training posters to enhance awareness.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">11</td>
+                        <td>Implement the remedial measures for Campaign 1.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">12</td>
+                        <td>Refine and formulate the attacks for Campaign 2.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">13</td>
+                        <td>Validate the functionality of data-gathering mechanisms for Campaign 2.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">14</td>
+                        <td>Obtain final authorization from IT Security for the planned attacks in Campaign 2.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">15</td>
+                        <td>Execute the social engineering attacks as delineated in Campaign 2.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">16</td>
+                        <td>Evaluate the outcomes of Campaign 2.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">17</td>
+                        <td>Prepare and submit detailed reports to IT Security proposing policy reviews and employee training as part of the remedial actions for Campaign 2.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">18</td>
+                        <td>Implement the remedial measures for Campaign 2.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">19</td>
+                        <td>Create a dedicated webpage to present our data, remediation, and process.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">20</td>
+                        <td>Present LopeTrap at the Capstone Showcase.</td>
+                    </tr>
+                    
+                </tbody>
+                
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <br>
+        <br>
+        <h1 id="Team">Meet the Team</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .profile-box {
+    display: inline-block;
+    width: 15%;
+    height: 37rem;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    vertical-align: top; /* Add this line */
+  }
+  .profile-name {
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    color: #79060a; /* color */
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .profile-button {
+    display: block;
+    width: 120px;
+    padding-top: 5rem;
+    padding: 20px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+}
+
+.profile-button:hover {
+    background-color: #d85704; /* Darker burnt orange on hover */
+    opacity: 0.9; /* Reduce opacity to 90% on hover */
+}
+
+  .profile-image {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px; /* Add rounded corners */
+  }
+
+  .profile-bio {
+    text-align: center;
+    margin-top: 10px;
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+</style>
+</head>
+<body>
+  
+<!--THIS IS SEANS PROFILE-->
+<div class="container">
+  <div class="profile-box">
+    <div class="profile-name">Sean Jabri</div>
+    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Sean%20headshot.png?raw=true" width=100 height=100 alt="Sean's Photo">
+    <a href="https://www.linkedin.com/in/seanjabri/">
+        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
+    </a>
+    <div class="profile-bio">
+      <p>Security Analyst @ Kudelski Security | BS in IT with an Emphasis in Cybersecurity
+      </p>
+    </div>
+  </div>
+  <!--THIS IS ALEXIS' PROFILE-->
+  <div class="profile-box">
+    <div class="profile-name">Alexis Haugen</div>
+    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Alexis%20Headshot.jpg?raw=true" width=100 height=100 alt="Alexis's Photo">
+    <a href="https://www.linkedin.com/in/alexis-haugen-810856285/">
+        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
+    </a>
+    <div class="profile-bio"> 
+        <p>BS in IT with an Emphasis in Cybersecurity, Fall 2024
+      </p>
+    </div>
+  </div>
+  <!--THIS IS HANNAH'S PROFILE-->
+  <div class="profile-box">
+    <div class="profile-name">Hannah Jennifer</div>
+    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/hannah%20headshot.png?raw=true" width=100 height=100 alt="Hannah's Photo">
+    <a href="https://www.linkedin.com/in/hannahjenifer/">
+        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
+    </a>
+    <div class="profile-bio">
+      <p>SOC Analyst | BS in IT with an Emphasis in Cybersecurity, Spring 2024       
+      </p>
+    </div>
+  </div>
+  <!--THIS IS NATE'S PROFILE-->
+  <div class="profile-box">
+    <div class="profile-name">Nate Phillips</div>
+    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Nate%20Headshot.jpg?raw=true" width=100 height=100 alt="Nate's Photo">
+    <a href="https://www.linkedin.com/in/n8-phillips/">
+        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
+    </a>
+    <div class="profile-bio">
+      <p>BS in IT with an Emphasis in Cybersecurity, Spring 2024
+      </p>
+    </div>
+  </div>
+ <!--THIS IS JOSH'S PROFILE-->
+  <div class="profile-box">
+    <div class="profile-name">Josh Dinwiddie</div>
+    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/joshs%20headshot(2).jpg?raw=true" width=100 height=100 alt="Josh's Photo">
+    <a href="https://www.linkedin.com/in/joshua-dinwiddie-1406b81a2/">
+        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50" alt= "LinkedInLogo">
+    </a>
+    <div class="profile-bio">
+      <p>BS in IT with an Emphasis in Cybersecurity, Spring 2024
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
