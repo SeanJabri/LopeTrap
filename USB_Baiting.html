@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign 1 - USB Baiting</title>
+
+<script>
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
+  </script>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center; /* Vertically center content */
+            padding: 1rem; /* Adjust padding as needed */
+            background-color: #f0f0f0;
+            z-index: 1; /* Make sure the header stays on top */
+        }
+
+        .header-content {
+            flex: 1; /* Allow title to grow and fill remaining space */
+            display: flex;
+            /* We keep justify-content: center for centering */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the title element with higher specificity */
+        .title-button {
+            font-size: 80px; /* Increase title font size */
+            color:#79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center; /* Center title horizontally */
+            position: relative; /* Needed for proper positioning of ::before */
+            margin-left: 210px; /* Adjust margin as needed */
+            padding-left: 200px; /* Adjust padding as needed */
+            padding-right: 200px; /* Adjust padding as needed */
+        }
+
+        .meet-the-team-button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            /* text-decoration: underline; /* Add underline to text */
+            /* text-decoration-thickness: 1px; /* Thinner underline */
+            border: 3px solid white ; /* Set width, style, and color */
+            /*=  border-radius: 0px */
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 2rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+
+            /* Position the button at top left */
+            position: absolute;
+            top: 10;
+            left: 50px;
+        }
+
+        .meet-the-team-button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            border: 3px solid #ecac5b ; /* Set width, style, and color */
+            font-weight: bold; /* Make text bold on hover */
+        } 
+
+        .logo {
+            /* Style your logo image here */
+            width: 210px; /* Adjust width as needed */
+            height: 134px; /* Adjust height as needed */
+            margin-right: 60px; /* Add margin to the right to move it off the wall */
+            cursor: pointer; /* Set cursor to pointer for home button behavior */
+        }
+
+        .button-container {
+            margin-top: 1rem; /* Adjust margin as needed */
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Style for the buttons with the desired color and hover effect */
+        .button-container button {
+            background-color: #f0f0f0; /* Base button color */
+            color: #79060a; /* Black text color */
+            border: none; /* No border for seamless look */
+            border-radius: 0px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; /* Smooth color change on hover */
+            padding: 1.5rem 5rem; /* Adjust padding as needed for button size */
+            font-size: 20px; /* Increase font size */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Change font family */
+            display: flex; /* Arrange buttons side-by-side */
+            /* Optional: Remove button margin if applied */
+            margin: 0;
+        }
+
+        .button-container button:hover {
+            background-color: #ecac5b; /* Tint color on hover */
+            font-weight: bold; /* Make text bold on hover */
+        }
+        
+    </style>
+    </head>
+    <body>
+        <header class="sticky">
+            <div class="header-content">
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Main_Page#Team')" class="meet-the-team-button">Meet the Team</button> 
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Main_Page')" class="title-button">LopeTrap</button>
+            </div>
+            <img src="https://github.com/Hjenifer/lopeTrap/blob/main/LopeTrap_Logo.png?raw=true" alt="Logo" class="logo">
+        </header>
+
+    <div class="button-container">
+
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Quishing')" class="redirect-button">Campaign 1 - Quishing</button>
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Help_Desk')" class="redirect-button">Campaign 2 - Vishing Help Desk</button>
+        <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Public_Safety')" class="redirect-button">Campaign 2 - Vishing Public Safety</button>
+    </div>
+</body>
+</section>
+
+<section> <!-- This is all the code to format the top bar and buttons correctly. -->
+ <style>
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            font-size: 45px;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            color: #79060a; /* color */
+        }
+
+        h2 {
+            margin-top: 40px;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration-thickness: 2px;
+            margin-bottom: 1rem; /* Using rem for better compatibility */
+            font-size: 35px;
+            color: #79060a; /* color */
+            position: relative; /* Needed for pseudo-element positioning */
+            padding-left: 4rem; /* Padding*/
+        }
+
+        .attack-title {
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #79060a /* color */;
+            font-weight: bold;
+            padding-left: 6.5rem; /* Padding*/
+        }
+
+        h3 {
+            font-family: Garamond, 'Times New Roman', Times, serif;
+            color: #79060a; /* color */
+            font-size: 25px;
+            padding-left: 10rem; /* Padding*/
+            margin-bottom: 10px;
+        }
+ </style>
+
+<style>
+    p{
+        font-family: Garamond, 'Times New Roman', Times, serif;
+        color: black; /* color */
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .bold-label {
+        font-weight: bold; /* Makes the text bold */
+    }
+
+    .redacted {
+        background-color: black;
+        color: black;
+        padding: 2px;  /* Optional padding for better visibility */
+    }
+
+    .tabbed-text {
+        /*white-space: pre-wrap;  /* Preserves whitespace characters */
+        padding-left: 2em;  /* Indent the text */
+    }
+
+</style>
+
+
+    <body>
+        <h1>Campaign 1 - USB Baiting</h1>
+
+        <h2>Attack Description:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <div style="padding-left: 8rem">
+            <p> 
+                <span class="tabbed-text">
+                    We executed an on-campus USB engagement initiative targeting both students and faculty members. With a paramount focus on student welfare, we curated a PDF document and distributed it across 10 USB drives. Each drive housed a benign message, guiding the recipient to access a Google Form link embedded within the PDF. Upon plugging in the drive, users were prompted to participate in a brief survey via the provided form. Notably, Public Safety engaged in this process, contributing valuable insights as part of our comprehensive assessment endeavor.    </p>
+                </span>
+            </p>
+        </div>
+                
+
+        <h2>Scope:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <h3 style="padding-left: 8rem">In Scope:</h3>
+        <div style="padding-left: 10rem">
+            <p> 
+                We were permitted to drop USB flash drives throughout Grand Canyon University's campus
+            </p>
+        </div>
+        <h3 style="padding-left: 8rem">Out of Scope:</h3>
+        <div style="padding-left: 10rem">
+            <p> 
+                Disrupting work or school operations is prohibited. Additionally, uploading any malicous file or content onto any device through the USB flash drive.
+            </p>
+        </div>
+
+
+        <h2>Event Log:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <style>
+            #event-log-table {
+              width: 90%;
+              border-collapse: collapse;
+              margin-bottom: 20px;
+              margin-left: 6.5rem; /* Adjusted margin-left for readability */
+            }
+          
+            th,
+            td {
+              padding: 10px;
+              text-align: left;
+              font-family: Garamond, 'Times New Roman', Times, serif;
+              font-size: 20px;
+            }
+          
+            th {
+              background-color: #ecac5b; /* Header color */
+              font-weight: bold;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f6d6ad; /* Alternating row color 1 */
+            }
+          
+            tr:nth-child(odd) {
+              background-color: #f4cd9d; /* Alternating row color 2 */
+            }
+          
+            tr:hover {
+              background-color: #fbeede; /* Hover color */
+            }
+          </style>
+
+            <table id="event-log-table" border="1">  <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January 25 - February 12</td>
+                        <td>LopeTrap conducted a comprehensive analysis of campus trends to discern student and faculty areas where a found USB drive would be trusted.</td>
+                    </tr>
+                    <tr>
+                        <td>February 16</td>
+                        <td>LopeTrap created and uploaded the PDF onto all USB drives containing a link to the Google form survey.</td>
+                    </tr>
+                    <tr>
+                        <td>February 27</td>
+                        <td>LopeTrap received approval for the deployment of USB flash drives.</td>
+                    </tr>
+                    <tr>
+                        <td>February 27</td>
+                        <td>LopeTrap deployed all 10 USB flash drives throughout campus.</td>
+                    </tr>
+                    <tr>
+                        <td>February 27 - March 23</td>
+                        <td>LopeTrap compiled and assessed metrics extracted from the submissions received through the Google form.</td>
+                    </tr>
+                    <tr>
+                        <td>March 6 - 7</td>
+                        <td>LopeTrap checked up on USB flash drives to determine if they had been turned in, lost, damaged, or untouched.</td>
+                    </tr>
+                    <tr>
+                        <td>March 20</td>
+                        <td>LopeTrap devised a plan for remedial design.</td>
+                    </tr>
+                    <tr>
+                        <td>March 22</td>
+                        <td>LopeTrap was granted approval from IT Security to execute the remediation plan.</td>
+                    </tr>
+                    <tr>
+                        <td>March 23</td>
+                        <td>LopeTrap contacted the victims of the USB flash drives to help them understand the severity of plugging in unknown flash drives and depoloyed informational posters around campus.</td>
+                    </tr>
+                </tbody>
+                
+              </tbody>
+            </table>
+          </section>
+          
+
+        <h2>USB Baiting Attack:</h2>
+            <body>
+                <div style="width: 95%; margin: 0 auto; margin-bottom: 1.5rem; margin-top: -.5rem; height: 20; border-top: 1.5px solid #79060a;"></div>
+            </body>
+        <h3 class="attack-title">Attack Preperation</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                <span class="tabbed-text">
+                    In preparation for this campaign, we purchased 10 USB drives with a low storage capacity. This strategic choice was made to make them less desirable, increasing the chance of their return. Each of these drives was uniformly renamed 'CONGRATS!' and accompanied by a PDF file containing the message below. This measure was implemented to guarantee the absence of malicious content and to ensure strict adherence to our defined scope of operation.                </span>
+            </p>
+        </div>
+
+        <h3>The Flash Drive:</h3>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/usb1ll.png?raw=true" style="width: 20%; height: 20%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/usb1ww.png?raw=true" alt="Survey 2" style="width: 50%; height: 50%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+    
+
+        <h3>The Google Form:</h3>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Survey%201.png?raw=true" style="width: 40%; height: 40%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/survey%202.png?raw=true" alt="Survey 2" style="width: 40%; height: 40%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/survey%203.png?raw=true" alt="Survey 3" style="width: 40%; height: 40%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+
+        <h3 class="attack-title">Attack Deployment</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                <span class="tabbed-text">
+                    The LopeTrap team strategically placed USB drives in common areas frequenty used by students and faculty, such as food areas, studying lounges, resturaunts, library and more. Our team maintained discreation to prevent suspicion and maximize the effectiveness of the test.
+                </span>
+            </p>
+        </div>
+
+
+        <h3>USB Drop Location Map:</h3>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/USB%20Map.png?raw=true" style="width: 50%; height: 50%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+
+        <h3 class="attack-title">USB Drive Check-In</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                    Below is a list of all 10 USB flash drives. The table shows where they are located, and what happened to the USB drives at the final check-up
+            </p>
+        </div>
+
+        <table id="event-log-table" border="1"> 
+            <thead>
+                <tr>
+                    <th>USB Drive</th>
+                    <th>Date</th>
+                    <th>Building Number</th>
+                    <th>Floor Number</th>
+                    <th>Location Description</th>
+                    <th>Picture</th>
+                    <th>Check-Up</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Grey-1</td>
+                    <td>2024-03-28</td>
+                    <td>70</td>
+                    <td>1</td>
+                    <td>South-East corner of parking garage</td>
+                    <td><div style="border: 3px solid rgb(21, 224, 21);"><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Grey%201.png?raw=true" width="150" height="200" alt="USB-Return"></div></td>
+                    <td>Drive has been plugged in and survey filled out.</td>
+                </tr>
+                    <td>Yellow-2</td>
+                    <td>2024-03-28</td>
+                    <td>71</td>
+                    <td>4</td>
+                    <td>South-West break room on blue chair</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Yellow-2.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Moved-Lost</td>
+                </tr>
+                    <td>Pink-3</td>
+                    <td>2024-03-26</td>
+                    <td>23</td>
+                    <td>1</td>
+                    <td>Outside break room 23-133, middle of counter</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Pink-3.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>N/A</td>
+                </tr>
+                    <td>Purple-4</td>
+                    <td>2024-03-26</td>
+                    <td>29</td>
+                    <td>3</td>
+                    <td>Inside Library beside computer 19</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Purple-4.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Drive has been plugged in and survey filled out.</td>
+                </tr>
+                    <td>Orange-5</td>
+                    <td>2024-03-26</td>
+                    <td>29</td>
+                    <td>2</td>
+                    <td>GCBC East facing couch</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Orange-5.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Recovered-in couch</td>
+                </tr>
+                    <td>Black-6</td>
+                    <td>2024-03-26</td>
+                    <td>26</td>
+                    <td>4</td>
+                    <td>West conference room on the mousepad beside Creston</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Black-6.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Moved-Lost</td>
+                </tr>
+                    <td>Red-7</td>
+                    <td>2024-03-26</td>
+                    <td>18</td>
+                    <td>2</td>
+                    <td>South side of SSC-On stack of papers beside printer</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Red-7.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Moved-Lost</td>
+                </tr>
+                    <td>Blue-8</td>
+                    <td>2024-03-26</td>
+                    <td>16</td>
+                    <td>N/A</td>
+                    <td>Elevator 2</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Blue-8.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Drive has been plugged in and survey has been filled out</td>
+                </tr>
+                    <td>White-9</td>
+                    <td>2024-03-26</td>
+                    <td>42</td>
+                    <td>1</td>
+                    <td>North entrance-staff printer-staff entrance only</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/White-9.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Moved-Lost</td>
+                 </tr>
+                    <td>Green-10</td>
+                    <td>2024-03-26</td>
+                    <td>84</td>
+                    <td>1</td>
+                    <td>South-West entrance-left of entrance on a table</td>
+                    <td><img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Green-10.png?raw=true" width="150" height="200" alt="USB-Return"></td>
+                    <td>Moved-Lost</td>
+            </tbody>
+        </thead>
+    </table>
+
+
+        <h3 class="attack-title">Attack Results</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                <span class="tabbed-text">
+                    We executed an on-campus USB engagement initiative targeting both students and faculty members. With a paramount focus on student welfare, we curated a PDF document and distributed it across 10 USB drives. Each drive housed a benign message, guiding the recipient to access a Google Form link embedded within the PDF. Upon plugging in the drive, users were prompted to participate in a brief survey via the provided form. Notably, Public Safety engaged in this process, contributing valuable insights as part of our comprehensive assessment endeavor.    </p>
+                </span>
+            </p>
+        </div>
+
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/results%201.png?raw=true" style="width: 30%; height: 30%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/reslult%20question%202.png?raw=true" style="width: 30%; height: 30%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/results%202.png?raw=true" style="width: 30%; height: 30%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/results%204(3).png?raw=true" style="width: 30%; height: 30%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/reult%205(3).png?raw=true" style="width: 30%; height: 30%; border: 4px solid #f0f0f0; margin: 10px;">  </div>
+
+                
+        <h3 class="attack-title">Attack Remediation</h3>
+        <h3>Description:</h3>
+        <div style="padding-left: 12rem">
+            <p> 
+                <span class="tabbed-text">
+                    After collecting our results and data, we started the remediation process. With three people who had filled out the survey, we had a form of communication to send out our remediation poster. The goal of this poster is to learn, and understand why plugging a unknown device into your computer can be helpful.
+                </span>
+            </p>
+        </div>
+
+    <h3>Remediation Poster:</h3>
+        <br>
+        <div style="text-align: center;">  <img src="https://github.com/Hjenifer/lopeTrap/blob/main/USB-Baiting/Remediation%20poster.png?raw=true" style="width: 30%; height: 30%; border: 4px solid #f0f0f0; margin: 10px;">  </div>  
+
+        <h2 style=" text-align: center; margin-left: -4rem;">Quickly Navigate to the Next Section</h2>
+
+        <div class="button-container">
+
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Quishing')" class="redirect-button">Campaign 1 - Quishing</button>
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/USB_Baiting')" class="redirect-button">Campaign 1 - USB Baiting</button>
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Help_Desk')" class="redirect-button">Campaign 2 - Vishing Help Desk</button>
+            <button onclick="redirectToPage('https://seanjabri.github.io/LopeTrap/Vishing_Public_Safety')" class="redirect-button">Campaign 2 - Vishing Public Safety</button>
+        </div>    
+        <br>
