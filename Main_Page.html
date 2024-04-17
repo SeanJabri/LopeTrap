@@ -14,6 +14,10 @@
 <section> <!-- This is all the code to format the top bar and buttons correctly. -->
     <style>
 
+        .bold-label {
+                font-weight: bold; /* Makes the text bold */
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -257,11 +261,10 @@
             #event-log-table {
                 width: 75%;
                 border-collapse: collapse;
-                margin-bottom: 20px;
            }   
             
            .table-container {
-                height: 100vh; /* Set container height to full viewport height */
+                height: 100%; /* Set container height to full viewport height */
                 display: flex; /* Use Flexbox layout */
                 justify-content: center; /* Center horizontally */
                 align-items: center; /* Center vertically */
@@ -400,126 +403,168 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    
-  .container {
-    text-align: center;
-    margin-top: 50px;
-  }
-  .profile-box {
-    display: inline-block;
-    width: 15%;
-    height: 37rem;
-    padding: 20px;
-    margin: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ced4da;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    vertical-align: top; /* Add this line */
-  }
-  .profile-name {
-    font-family: Garamond, 'Times New Roman', Times, serif;
-    color: #79060a; /* color */
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  .profile-button {
-    display: block;
-    width: 120px;
-    padding-top: 5rem;
-    padding: 20px;
-    border-radius: 0px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
-}
+    .container {
+      text-align: center;
+      width: 100%;
+      
+      overflow-x: auto; /* Enable horizontal scrolling */
+    }
+  
+    .profile-box {
+      display: inline-block;
+      width: 15%;
+      padding: 10px;
+      margin: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ced4da;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .profile-name {
+      font-family: Garamond, 'Times New Roman', Times, serif;
+      color: #79060a;
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  
+    .profile-button {
+      margin-top: 7px;
+      display: block;
+      align-items: center;
+      width: 22%;
+      height: 10%;
+      margin-left: 40%;
+      margin-right: 60%;
+      cursor: pointer;
+    }
+  
+    .profile-image {
+      width: 100%;
+      height: auto;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 15px;
+    }
 
-.profile-button:hover {
-    background-color: #d85704; /* Darker burnt orange on hover */
-    opacity: 0.9; /* Reduce opacity to 90% on hover */
-}
+    .profile-bio {
+        text-align: left;
+        align-items: center;
+        font-size: 30px;
+        justify-content: center;
+        height: auto; /* Set a specific height for the profile bio box */
+        display: flex;
+        padding: 5px; /* Add padding for better readability */
+    }
 
-  .profile-image {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    margin-bottom: 10px;
-    border-radius: 15px; /* Add rounded corners */
-  }
-
-  .profile-bio {
-    text-align: center;
-    margin-top: 10px;
-    display: flex; /* Use Flexbox layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-</style>
+    @media (max-width: 768px) {
+      .profile-box {
+        width: 30%; /* Adjust width for smaller screens */
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .profile-box {
+        width: 45%; /* Adjust width for even smaller screens */
+      }
+    }
+  </style>
+  
 </head>
 <body>
-  
-<!--THIS IS SEANS PROFILE-->
+  <!--SEAN'S PROFILE-->
 <div class="container">
-  <div class="profile-box">
-    <div class="profile-name">Sean Jabri</div>
-    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Sean%20headshot.png?raw=true" width=100 height=100 alt="Sean's Photo">
-    <a href="https://www.linkedin.com/in/seanjabri/">
-        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
-    </a>
-    <div class="profile-bio">
-      <p>Security Analyst @ Kudelski Security | BS in IT with an Emphasis in Cybersecurity
-      </p>
+    <div class="profile-box">
+      <div class="profile-name">Sean Jabri</div>
+      <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Sean%20headshot.png?raw=true" width=100 height=100 alt="Sean Jabri's Photo">
+      <a href="https://www.linkedin.com/in/seanjabri/">
+          <img class="profile-button" src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50" alt= "LinkedIn Logo">
+      </a>
+      <div class="profile-bio">
+        <p> <span class="bold-label">Professional Bio:</span> <br> – Security Analyst <br> – BS in IT with an Emphasis in Cybersecurity <br> – CompTIA S+ 
+            <br><br> <span class="bold-label"> Contributions:</span> 
+            <br>  – Project Lead 
+            <br>  –  IT Security POC
+            <br>  –  Graphic Design 
+            <br>  –  Executed Attacks 
+            <br>  –  Front-end Web Dev 
+            <br>  –  Back-end Web Dev</p>
+      </div>
+
     </div>
-  </div>
-  <!--THIS IS ALEXIS' PROFILE-->
-  <div class="profile-box">
-    <div class="profile-name">Alexis Haugen</div>
-    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Alexis%20Headshot.jpg?raw=true" width=100 height=100 alt="Alexis's Photo">
-    <a href="https://www.linkedin.com/in/alexis-haugen-810856285/">
-        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
-    </a>
-    <div class="profile-bio"> 
-        <p>US Department of Defense CySP Scholarship recipient | BS in Cybersecurity, Fall 2024
-      </p>
+    <!--ALEXIS' PROFILE-->
+    <div class="profile-box">
+      <div class="profile-name">Alexis Haugen</div>
+      <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Alexis%20Headshot.jpg?raw=true" width=100 height=100 alt="Alexis Haugen's Photo">
+      <a href="https://www.linkedin.com/in/alexis-haugen-810856285/">
+          <img class="profile-button" src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50" alt= "LinkedIn Logo">
+      </a>
+      <div class="profile-bio"> 
+          <p><span class="bold-label">Professional Bio:</span> <br> – US Department of Defense CySP Scholarship Recipient <br> – BS in Cybersecurity, Fall 2024
+            <br><br> <span class="bold-label"> Contributions:</span> 
+            <br>  – Sub-Group Lead  
+            <br>  – Graphic Design 
+            <br>  – Executed Attacks 
+            <br>  – Progress Reports 
+            <br>  – Front-end Web Dev</p>
+      </div>
+
     </div>
-  </div>
-  <!--THIS IS HANNAH'S PROFILE-->
-  <div class="profile-box">
-    <div class="profile-name">Hannah Jenifer</div>
-    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/hannah%20headshot.png?raw=true" width=100 height=100 alt="Hannah's Photo">
-    <a href="https://www.linkedin.com/in/hannahjenifer/">
-        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
-    </a>
-    <div class="profile-bio">
-      <p>SOC Analyst | BS in IT with an Emphasis in Cybersecurity, Spring 2024       
-      </p>
+    <!--HANNAH'S PROFILE-->
+    <div class="profile-box">
+      <div class="profile-name">Hannah Jenifer</div>
+      <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/hannah%20headshot.png?raw=true" width=100 height=100 alt="Hannah Jenifer's Photo">
+      <a href="https://www.linkedin.com/in/hannahjenifer/">
+          <img class="profile-button" src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50" alt= "LinkedIn Logo">
+      </a>
+      <div class="profile-bio">
+        <p><span class="bold-label">Professional Bio:</span> <br> – SOC Analyst <br> – BS in IT with an Emphasis in Cybersecurity, Spring 2024 <br> – CompTIA S+
+            <br><br> <span class="bold-label"> Contributions:</span> 
+            <br>  – Sub-Group Lead  
+            <br>  – Attack Preparation 
+            <br>  – Progress Reports 
+            <br>  – Back-end Web Dev</p>
+      </div>
+
     </div>
-  </div>
-  <!--THIS IS NATE'S PROFILE-->
-  <div class="profile-box">
-    <div class="profile-name">Nate Phillips</div>
-    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Nate%20Headshot.jpg?raw=true" width=100 height=100 alt="Nate's Photo">
-    <a href="https://www.linkedin.com/in/n8-phillips/">
-        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50"alt= "LinkedInLogo">
-    </a>
-    <div class="profile-bio">
-      <p>BS in IT with an Emphasis in Cybersecurity, Spring 2024
-      </p>
+    <!--NATE'S PROFILE-->
+    <div class="profile-box">
+      <div class="profile-name">Nate Phillips</div>
+      <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/Nate%20Headshot.jpg?raw=true" width=100 height=100 alt="Nate Phillips's Photo">
+      <a href="https://www.linkedin.com/in/n8-phillips/">
+          <img class="profile-button" src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50" alt= "LinkedIn Logo">
+      </a>
+      <div class="profile-bio">
+        <p><span class="bold-label">Professional Bio:</span> <br> – BS in IT with an Emphasis in Cybersecurity, Spring 2024
+            <br><br> <span class="bold-label"> Contributions:</span> 
+            <br>  – Sub-Group Lead  
+            <br>  – Graphic Design 
+            <br>  – Executed Attacks 
+            <br>  – Metric Analysis 
+            <br>  – Front-end Web Dev</p>
+      </div>
+
     </div>
-  </div>
- <!--THIS IS JOSH'S PROFILE-->
-  <div class="profile-box">
-    <div class="profile-name">Josh Dinwiddie</div>
-    <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/joshs%20headshot(2).jpg?raw=true" width=100 height=100 alt="Josh's Photo">
-    <a href="https://www.linkedin.com/in/joshua-dinwiddie-1406b81a2/">
-        <img class=button-image src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50" alt= "LinkedInLogo">
-    </a>
-    <div class="profile-bio">
-      <p>BS in IT with an Emphasis in Cybersecurity, Spring 2024
-      </p>
+   <!--JOSH'S PROFILE-->
+    <div class="profile-box">
+      <div class="profile-name">Josh Dinwiddie</div>
+      <img class="profile-image" src="https://github.com/Hjenifer/lopeTrap/blob/main/Main%20Page/joshs%20headshot(2).jpg?raw=true" width=100 height=100 alt="Josh Dinwiddie's Photo">
+      <a href="https://www.linkedin.com/in/joshua-dinwiddie-1406b81a2/">
+          <img class="profile-button" src="https://raw.githubusercontent.com/Hjenifer/lopeTrap/main/Main%20Page/LinkedIn_logo.webp" width="50" height="50" alt= "LinkedIn Logo">
+      </a>
+      <div class="profile-bio">
+        <p><span class="bold-label">Professional Bio:</span> <br> – BS in IT with an Emphasis in Cybersecurity, Spring 2024
+            <br><br> <span class="bold-label"> Contributions:</span> 
+            <br>  – Graphic Design 
+            <br>  – Executed Attacks 
+            <br>  – Metric Analysis   
+            <br>  – Progress Reports </p>
+      </div>
+
     </div>
-  </div>
+  </div>  
 </div>
 
           <h2 style=" text-align: center; margin-left: -4rem;">Quickly Navigate to the Next Section</h2>
@@ -534,4 +579,3 @@
         <br>
 </body>
 </html>
-
