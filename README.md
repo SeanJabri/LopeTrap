@@ -12,3 +12,5 @@ Our vision for this project is to cultivate a stronger cybersecurity-oriented mi
 
 ## Check Out the Website:
 [https://seanjabri.github.io/LopeTrap/Main_Page](https://seanjabri.github.io/LopeTrap/Main_Page)
+
+**We encourage you to view our website using a computer, as it wasn't optimized for mobile devices.*
